@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  input,
+  textarea {
+    @apply border p-2 rounded-lg block w-full focus:ring-2 focus:ring-violet-500 outline-none;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  button {
+    @apply w-full disabled:opacity-50 bg-violet-600 text-white p-2 rounded-lg block;
+  }
+
+  h1 {
+    @apply text-4xl font-semibold tracking-tighter;
+  }
+
+  h3 {
+    @apply text-lg font-semibold tracking-tighter;
+  }
 }
