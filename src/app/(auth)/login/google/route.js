@@ -35,7 +35,7 @@ export async function GET(req) {
     const newUser = await prisma.user.create({
       data: {
         name: user.name,
-        email: user.name,
+        email: user.email,
       },
     });
     const payload = {
