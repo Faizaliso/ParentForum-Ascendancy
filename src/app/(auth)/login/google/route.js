@@ -36,6 +36,7 @@ export async function GET(req) {
       data: {
         name: user.name,
         email: user.email,
+        avatarUrl: user.picture,
       },
     });
     const payload = {
