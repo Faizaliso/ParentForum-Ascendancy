@@ -13,6 +13,7 @@ export default function Page() {
         <form action={formAction} className="space-y-2">
           <input name="title" placeholder="title" />
           <textarea name="content" placeholder="content" rows={6} />
+          <input name="file" type="file" accept="jpg,png" />
           <button disabled={pending}>Create</button>
         </form>
       </section>

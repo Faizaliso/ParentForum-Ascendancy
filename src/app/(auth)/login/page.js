@@ -8,7 +8,7 @@ import { loginWithGoogleAction } from "./action-google";
 export default function Page() {
   const [state, formAction, pending] = useActionState(loginAction, null);
   return (
-    <main className="space-y-6 ">
+    <main className="space-y-5  ">
       <section className="flex flex-col justify-center items-center">
         <h3>Login</h3>
         <p>Welcome back, please login</p>
@@ -26,7 +26,7 @@ export default function Page() {
         )}
       </form>
 
-      <p>
+      <p className="flex justify-center">
         Don&apos;t have an account ?{" "}
         <Link href="/register" className="link">
           Register

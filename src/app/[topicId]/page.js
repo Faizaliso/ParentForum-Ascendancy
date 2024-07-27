@@ -1,5 +1,6 @@
 import { prisma } from "@/utils/prisma";
 import { CreateCommentForm } from "./form.create-comment";
+import Image from "next/image";
 
 export default async function Page({ params }) {
   const topic = await prisma.topic.findFirst({
@@ -33,10 +34,16 @@ export default async function Page({ params }) {
 
   return (
     <main className="space-y-6">
-      <section>
+      <section className="space-y-4">
         <h1>{topic.title}</h1>
         <p>{topic.content}</p>
         <p>{topic.user.name}</p>
+        <Image
+          alt="topic-image"
+          src={`${process.env.R2_PUBLIC_URL}/parentforum/${topic.id}/${topic.image}`}
+          width={600}
+          height={400}
+        />
       </section>
       <section className="space-y-2">
         <h3>Replies</h3>

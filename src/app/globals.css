@@ -20,3 +20,9 @@
     @apply text-lg font-semibold tracking-tighter;
   }
 }
+
+@layer components {
+  .link {
+    @apply font-semibold text-violet-600;
+  }
+}
