@@ -4,11 +4,8 @@
 
 export const TopicCard = ({ topic }) => {
   return (
-    <div key={topic.id} className="p-4 border border-slate-200 rounded-lg">
+    <div key={topic.id} className="bg-slate-200 p-2 rounded-lg">
       <h3>{topic.title}</h3>
-      {/* <form action={DeleteTopicAction(topic.id)}>
-        <button>Delete</button>
-      </form> */}
     </div>
   );
 };

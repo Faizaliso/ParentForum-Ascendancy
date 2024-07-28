@@ -6,7 +6,7 @@ import { logoutAction } from "./action";
 export const UpdateUserForm = ({ user }) => {
   // const [state, formAction, pending] = (useActionState, null);
   return (
-    <main>
+    <main className="space-y-4">
       <form className="space-y-2">
         <input name="name" placeholder="name" defaultValue={user?.name} />
         <input
@@ -25,7 +25,9 @@ export const UpdateUserForm = ({ user }) => {
       )} */}
       </form>
       <form action={logoutAction}>
-        <button>Log Out</button>
+        <button className="bg-transparent w-fit text-gray-600 text-sm">
+          Log Out
+        </button>
       </form>
     </main>
   );

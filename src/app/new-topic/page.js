@@ -6,7 +6,7 @@ import { newTopicAction } from "./action";
 export default function Page() {
   const [_, formAction, pending] = useActionState(newTopicAction, null);
   return (
-    <main>
+    <main className="flex flex-col p-8 bg-white rounded-lg">
       <section className="space-y-4">
         <h1>New Topic</h1>
         <p>Create your Topic</p>

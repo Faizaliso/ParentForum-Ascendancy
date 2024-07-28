@@ -33,16 +33,20 @@ export default async function Page({ params }) {
   });
 
   return (
-    <main className="space-y-6">
-      <section className="space-y-4">
+    <main className="flex flex-col gap-8 bg-white p-8 rounded-lg">
+      <section className="bg-slate-200 p-5 space-y-4 rounded-lg">
+        <div className="unsolved">
+          <p className=" text-[10px] font-medium text-rose-500">UNSOLVED</p>
+        </div>
         <h1>{topic.title}</h1>
         <p>{topic.content}</p>
-        <p>{topic.user.name}</p>
+        <p>by {topic.user.name}</p>
         <Image
           alt="topic-image"
           src={`${process.env.R2_PUBLIC_URL}/parentforum/${topic.id}/${topic.image}`}
           width={600}
           height={400}
+          className="rounded-lg"
         />
       </section>
       <section className="space-y-2">
@@ -53,8 +57,8 @@ export default async function Page({ params }) {
               key={comment.id}
               className="p-4 border border-slate-200 rounded-lg"
             >
-              <p className="font-semibold">{comment.content}</p>
-              <p>{comment.user.name}</p>
+              <p className="font-medium">{comment.content}</p>
+              <p>by {comment.user.name}</p>
             </div>
           );
         })}

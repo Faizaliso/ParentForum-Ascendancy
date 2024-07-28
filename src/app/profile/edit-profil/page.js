@@ -12,8 +12,8 @@ export default async function Page() {
   });
 
   return (
-    <main>
-      <section>Edit Profile</section>
+    <main className="flex flex-col bg-white p-8 gap-7 rounded-lg">
+      <h2>Edit Profile</h2>
       <section>
         <UpdateUserForm user={userData} />
       </section>

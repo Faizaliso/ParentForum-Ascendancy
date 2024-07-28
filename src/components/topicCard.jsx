@@ -6,11 +6,24 @@ import Link from "next/link";
 
 export const TopicCard = ({ topic }) => {
   return (
-    <div key={topic.id} className="p-4 border border-slate-200 rounded-lg">
+    <div
+      key={topic.id}
+      className="flex flex-col gap-2 p-4 bg-slate-200 rounded-lg"
+    >
+      <div className="unsolved">
+        <p className=" text-[10px] font-medium text-rose-500">UNSOLVED</p>
+      </div>
       <Link href={`${topic.id}`}>
-        <h3>{topic.title}</h3>
+        <h2>{topic.title}</h2>
       </Link>
-      <p>{topic.user.name}</p>
+      <div className="flex gap-4">
+        <p>by {topic.user.name}</p>
+        <p>
+          {topic.comments
+            ? `${topic.comments.flat().length} Replies`
+            : "0 Replies"}
+        </p>
+      </div>
       {/* <form action={DeleteTopicAction(topic.id)}>
         <button>Delete</button>
       </form> */}

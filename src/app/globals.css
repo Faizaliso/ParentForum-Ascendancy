@@ -13,16 +13,27 @@
   }
 
   h1 {
-    @apply text-4xl font-semibold tracking-tighter;
+    @apply text-3xl font-semibold tracking-tighter text-gray-600;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tighter text-gray-600;
   }
 
   h3 {
-    @apply text-lg font-semibold tracking-tighter;
+    @apply text-lg font-semibold tracking-tighter text-gray-600;
+  }
+
+  p {
+    @apply text-sm font-normal text-gray-500;
   }
 }
 
 @layer components {
   .link {
     @apply font-semibold text-violet-600;
+  }
+  .unsolved {
+    @apply flex justify-center items-center text-rose-500 bg-rose-200 px-3 py-1 w-fit rounded-full;
   }
 }

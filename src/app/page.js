@@ -11,21 +11,25 @@ export default async function Page() {
           avatarUrl: true,
         },
       },
+      comments: true,
     },
     orderBy: {
       createdAt: "desc",
     },
   });
 
+  console.log(topics);
+
   return (
-    <main className="space-y-4">
-      <section className="flex justify-between">
-        <h1>All Topic</h1>
-        <Link href="/new-topic">
-          <button>Create New Topic</button>
-        </Link>
-      </section>
-      <section className="space-y-2">
+    <main className="space-y-4 ">
+      <section className="space-y-8 bg-white p-8 rounded-lg">
+        <div className="flex justify-between items-center">
+          <h1>All Topic</h1>
+          <Link href="/new-topic">
+            <button>Create New Topic</button>
+          </Link>
+        </div>
+
         {topics.map((topic) => {
           return <TopicCard key={topic.id} topic={topic} />;
         })}

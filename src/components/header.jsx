@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-violet-600 text-white">
       <Link href="/" className="text-lg font-semibold">
-        Parenting Forum
+        akachan 😍
       </Link>
       {auth ? (
         <Link href="/profile">
